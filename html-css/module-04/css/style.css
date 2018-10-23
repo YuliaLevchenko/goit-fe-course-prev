@@ -1,0 +1,276 @@
+html{
+	box-sizing:border-box;
+}
+
+*,
+*::before, 
+*::after{
+    box-sizing: inherit;
+}
+
+body {
+
+    font-family: 'Open Sans', sans-serif;
+    color: #555252;
+    font-size: 14px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 400;
+    line-height: 26px;/* Приближение из-за подстановки шрифтов */
+    margin: 0;
+}
+
+.wrapper{
+    width: 1140px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 38px;
+    padding-bottom: 80px;
+    margin: 0 auto;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.clearfix::after {
+    display: table;
+    content: '';
+    clear: both;
+}
+
+.page-header {
+  margin-bottom: 110px;
+}
+
+.site-logo {
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: #555252;
+    font-size: 30px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 300;
+    line-height: 32px;/* Приближение из-за подстановки шрифтов */
+    text-align: left;
+}
+
+.site-logo:first-letter {
+    color: #1abc9c;
+    font-weight: 900;
+}
+
+/*site-navigation*/
+
+.site-navigation {
+    float: right;
+    width: 467px;
+    margin: 0;
+    margin-top: 12px;
+    padding: 0;
+    list-style: none;
+}
+
+.site-navigation li {
+    float: left;
+}
+
+.site-navigation li:not(:last-child) {
+    margin-right: 32px;
+}
+
+.site-navigation a {
+    display: block;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #0f0101;
+    font-size: 14px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 700;
+    line-height: 17px;
+    text-align: right;
+}
+  
+  .site-navigation a:hover,
+  .site-navigation a:focus {
+    color: #1abc9c;
+}
+
+/*Featured products section*/
+
+.featured-products {
+  margin-bottom: 110px;
+}
+
+.sectoin-header {
+font-family: 'Roboto', sans-serif;
+color: #515151;
+font-size: 48px;/* Приближение из-за подстановки шрифтов */
+font-weight: 900;
+line-height: 32px;/* Приближение из-за подстановки шрифтов */
+text-align: center;
+margin: 0;
+/*margin-top: 110px;*/
+text-transform: uppercase;
+}
+
+.sectoin-header::after {
+display: block;
+content: '';
+background-color:  #1abc9c;
+width: 164px;
+height: 7px;
+margin: 0 auto;
+margin-top: 32px;
+}
+
+/*features-list-css*/ 
+
+.features-list {
+    margin: 0;
+    margin-top: 90px;
+    padding: 0;
+    list-style: none;
+}
+
+.features-list li {
+    float:left;
+}
+  
+  .features-list-item{
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    width: 255px;
+    height: 322px;
+    list-style: none;
+    position: relative;/*1. указываем, элемент, от которого будет вестись отсчет положения абсолютно позиционированных элементов*/
+  }
+  
+  .features-list li:nth-child(4n){
+    margin-right: 0;
+  }
+
+  .features-list li:nth-child(n+5) {
+    margin-bottom: 0px;
+  }
+  
+  .features-list-descr{
+    position: absolute;/*2. поднимаем над потоком*/
+    bottom: 0; /*3. прижимаем к низу его родителя. в данном случае li*/
+    text-transform: uppercase;
+  }
+  
+  .features-list-name,
+  .features-list-price{
+    float: left;
+    margin: 0;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    font-size: 18px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 900;
+    line-height: 32px;/* Приближение из-за подстановки шрифтов */
+    text-align: left;
+  }
+  
+  .features-list-name{
+    width: 201px;
+    background-color: #323232;
+    padding-left:13px;
+    padding-right:13px;
+  }
+  
+  .features-list-price{
+    width:54px;
+    background-color: #8c8c8c;
+    text-align: center;
+  }
+  
+  .features-list li:hover .features-list-name{
+    background-color:  #1abc9c;
+  }
+  
+  .features-list li:hover .features-list-price{
+    background-color: rgba(255, 255, 255, 0.44);
+  }
+  
+  .features-list-item{
+    cursor:pointer;
+  }
+  
+
+  /*news section*/
+
+  .latest-news {
+    margin: 0;
+    padding: 0;
+    margin-top: 90px;
+  }
+
+  .latest-news-item {
+    float: left;
+    margin-right: 30px;
+    width: 350px;
+    /*height: 322px;*/
+    list-style: none;
+    position: relative;/*1. указываем, элемент, от которого будет вестись отсчет положения абсолютно позиционированных элементов*/
+  }
+  
+  .latest-news li:nth-child(3n){
+    margin-right: 0;
+  }
+
+  .latest-news-heder {
+    color: #555252;
+    font-size: 18px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 600;
+    line-height: 26px;/* Приближение из-за подстановки шрифтов */
+    text-align: left;
+    /*width: 301px;*/
+    margin: 0;
+    margin-top: 15px;
+  }
+
+  .latest-news-heder::after {
+    display: block;
+    content: '';
+    background-color: #4ec6ab;
+    width: 136px;
+    height: 3px;
+    margin-top: 15px;
+    }
+
+   .latest-news-announcement {
+       width: 335px;
+       text-align: left;
+       margin: 0;
+       margin-top: 30px;
+    }
+
+    .btn {
+
+      display: block;
+      margin-top: 15px;
+      border-radius: 3px;
+      background-color: #4ec6ab;
+      width: 160px;
+      height: 51px;
+      position: relative;
+  }
+
+    .btn a {
+      color: #ffffff;
+      font-size: 16px;/* Приближение из-за подстановки шрифтов */
+      font-weight: 300;
+      line-height: 26px;/* Приближение из-за подстановки шрифтов */
+      display: block;
+      text-decoration: none;
+      text-align: center;
+      position: absolute;              
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);
+    }

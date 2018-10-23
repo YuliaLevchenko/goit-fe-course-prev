@@ -1,0 +1,450 @@
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0 auto;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/*
+ * ========================================
+ * MASTHEAD
+ * ========================================
+ */
+
+.mastnav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 60px;
+}
+
+/*
+ * ========================================
+ * LOGO
+ * ========================================
+ */
+ .mast-logo {
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  color: #95e1d3;
+  font-size: 30px;/* Приближение из-за подстановки шрифтов */
+  font-weight: 700;
+}
+
+/*
+ * ========================================
+ * SITE NAV
+ * ========================================
+ */
+ .site-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 490px;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  list-style: none;
+}
+
+.site-nav a {
+  display: block;
+  padding: 0px 16px;
+  font-family: 'Montserrat', sans-serif;
+  color: #95e1d3;
+  font-size: 14px;/* Приближение из-за подстановки шрифтов */
+  font-weight: 400;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+
+.site-nav a:hover {
+  color: #f38181;
+}
+
+.site-nav a::after {
+  display: block;
+  content: '';
+  width: 0;
+  margin-top: 4px;
+  height: 3px;
+  background-color: #f38181;
+  transition: width 200ms linear;
+}
+
+.site-nav a:hover::after {
+  width: 100%;
+}
+
+/*
+ * ========================================
+ * MAIN
+ * ========================================
+ */
+ .main {
+  flex-grow: 1;
+}
+
+/*
+ * ========================================
+ * SERVICES SECTION
+ * ========================================
+ */
+
+.section {
+  padding-top: 90px;
+}
+
+.section-header {
+  margin: auto;
+  text-align: center;
+  margin-bottom: 65px;
+}
+
+.header-caption {
+  color: #333;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0 0 24px 0;
+}
+  
+.header-title {
+font-family: 'Montserrat', sans-serif;
+color: #333333;
+font-size: 30px; /* Приближение из-за подстановки шрифтов */
+font-weight: 700;
+text-align: center;
+text-transform: uppercase;
+margin-bottom: 0px;
+}
+  
+.header-title::after {
+  display: block;
+  content: '';
+  width: 60px;
+  height: 3px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 42px;
+  background-color: #f38181;
+}
+
+ .services-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.services-list li {
+  flex-basis: calc(33.3333% - 30px);
+  flex-grow: 0;
+  position: relative;
+}
+
+.services-list li:not(:nth-last-child(-n + 3)) {
+  margin-bottom: 30px;
+}
+
+.article-name {
+  font-family: 'Montserrat', sans-serif;
+  color: #333333;
+  font-size: 14px; /* Приближение из-за подстановки шрифтов */
+  font-weight: 400;
+  text-align: left;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: -4px 0 14px 0;
+  }
+    
+.article-text {
+  color: #999999;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0;
+  }
+
+.article {
+  position: relative;
+  padding-left: 62px;
+  }
+    
+.article::before {
+  display: inline-block;
+  content: '';
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  }
+  
+  .photography::before {
+    background-image: url("../img/png/icon_alarm.jpg");
+  }
+  
+  .web-design::before {
+    background-image: url("../img/png/icon_graph.jpg");
+  }
+  
+  .creativity::before {
+    background-image: url("../img/png/icon_computer.jpg");
+  }
+  
+  .seo::before {
+    background-image: url("../img/png/icon_book.jpg");
+  }
+  
+  .css-html::before {
+    background-image: url("../img/png/icon_home.jpg");
+  }
+  .digital::before {
+    background-image: url("../img/png/icon_image.jpg");
+  }
+
+
+/*
+ * ========================================
+ * TEAM SECTION
+ * ========================================
+ */
+
+ .header-title {
+  margin: 0 0 46px 0;
+}
+
+.header-text {
+  color: #999999;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-top: 45px;
+  width: 980px;
+  margin: auto;
+}
+
+.clearfix::after {
+  display: table;
+  content: '';
+  clear: both;
+}
+
+.team-list {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+list-style: none;
+padding: 0 0 80px 0;
+margin: 0;
+}
+
+.team-list-item{
+  flex: 0 0 380px;
+  position: relative;/*1. указываем, элемент, от которого будет вестись отсчет положения абсолютно позиционированных элементов*/
+}
+
+.team-member-photo {
+  transition: transform 200ms linear, opacity 200ms linear;
+}
+
+.team-list-item:hover .team-member-photo {
+transform: translate(-10px, -10px);
+
+}
+
+.overlay {
+position: absolute;
+width: 100%;
+height: 470px;
+display: flex;
+align-items: center;
+justify-content: center;
+opacity: 0;
+/*transition: transform 200ms linear, opacity 200ms linear;*/
+background-image: linear-gradient(
+  to top,
+  rgba(252, 227, 138, 0.81) 0%,
+  rgba(243, 129, 129, 0.81) 100%);
+  z-index: 1;
+ }
+  
+  .team-list-item:hover .overlay {
+    opacity: 1;
+    transform: translate(-10px, -10px);
+    box-shadow: 10px 10px 0px 0px #95e1d3;
+}
+
+ .social-icons {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+.social-icons li:last-child {
+  margin-right: 0px;
+  margin-bottom: 0px;
+}
+
+ .social-icons a {
+    display: block;
+    background-color: #fce38a;
+    border-right: 1px solid #f38181;
+    height: 56px;
+    width: 56px;
+    z-index: 1;
+    transition: background-color 300ms linear;
+  }
+
+    .visually-hidden {
+    position: absolute;
+  }
+
+  .social-icons-item-1, .social-icons-item-2, .social-icons-item-3, .social-icons-item-4 {
+    height: 56px;
+    width: 56px;
+    top: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .social-icons-item-1:hover, .social-icons-item-2:hover, .social-icons-item-3:hover, .social-icons-item-4:hover {
+    background-color: #95e1d3;
+    transition: background-color 300ms linear;
+  } 
+
+  .social-icons-item-1 {
+  background-image: url('../img/png/facebook.png');
+}
+
+.social-icons-item-2 {
+  background-image: url('../img/png/twitter.png');
+}
+
+.social-icons-item-3 {
+  background-image: url('../img/png/pinterest.png');
+}
+
+.social-icons-item-4 {
+  background-image: url('../img/png/instagram.png');
+}
+
+.team-list li:nth-child(3n){
+  margin-right: 0;
+margin-bottom: 0px;
+}
+
+.team-member{
+  position: relative;
+  margin-top: 30px;
+}
+
+.team-member-name, .team-member-position {
+ display: block;
+ text-align: center;
+}
+
+.team-member-name {
+font-family: 'Montserrat', sans-serif;
+margin: 0 0 14px 0;
+color: #333333;
+font-size: 14px;
+font-weight: 400;
+text-transform: uppercase;
+}
+
+.team-member-position {
+color: #999999;
+font-size: 15px;
+font-weight: 300;
+font-style: italic;
+line-height: 24px;
+margin: 0;
+}
+
+/*
+ * ========================================
+ * FOOTER
+ * ========================================
+ */
+
+footer {
+  position: relative;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #e5e5e5;
+  padding: 25px 0;
+}
+
+.footer-text {
+  font-family: 'Montserrat', sans-serif;
+  color: #333333;
+  font-size: 14px;/* Приближение из-за подстановки шрифтов */
+  font-weight: 400;
+  text-align: center;
+  color: #333333;
+  margin: 0;
+}
+
+.footer-colored-link {
+  color: #f38181;
+  text-decoration: none;
+}
+
+.form-inp {
+  font-family: 'Montserrat', sans-serif;
+  color: #cccccc;
+  font-size: 15px;
+  line-height: 16px;
+  font-style: italic;
+  font-weight: 400;
+  padding: 11px 0 11px 11px;
+  width: 230px;
+  border: 1px solid #e5e5e5;
+  margin-right: -4px;
+}
+
+.form-btn {
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: #95e1d3;
+  width: 150px;
+  text-transform: uppercase;
+  height: 40px;
+  border: 1px solid #95e1d3;
+}

@@ -1,0 +1,146 @@
+/* MEDIA*/
+
+@media (max-width: 767px) {
+  .page-header {
+    background-image: url('../img/banner1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: inherit;
+  }
+
+  .page-nav {
+    min-height: 100px;
+    padding-top: 20px;
+  }
+  
+  .site-nav {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  .logo {
+    margin: 0 auto;
+    margin-top: 120px;
+    text-align: center;
+  }
+
+  .home {
+    text-align: center;
+    margin: auto;
+    margin-top: 35px;
+  }
+  
+}
+
+
+@media (min-width: 768px) {
+  .container {
+    width: 670px;
+  }
+
+  .page-header {
+    background-image: url('../img/banner2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: inherit;
+  }
+
+  .page-nav {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 45px;
+    margin-bottom: 150px;
+  }
+
+  .site-nav {
+    margin: 0;
+    padding: 0;
+  }
+
+  .home {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+
+  .home-title {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .home-slogan {
+    /*display: block;
+    margin: 0 auto;*/
+    width: 405px;
+    text-align: center;
+    margin-bottom: 35px;
+  }
+
+  .home-btn {
+    width: 220px;
+  }
+
+  .partners-header-title {
+    width: 420px;
+  }
+
+  .partners-list {
+    width: 520px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .partners-list-item {
+    flex: 0 0 236px;
+    margin-bottom: 55px;
+  }
+
+  .partners-list-item:nth-last-child(-n +2) {
+    margin-bottom: 0;
+  }
+  
+  .partners-btn {
+    width: 200px;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 957px) {
+    .partners-list-item:nth-last-child(-n +2) {
+      margin-bottom: 0;
+    }
+  }
+  
+  @media (min-width: 958px) {
+    .container {
+      width: 942px;
+    }
+
+    .page-header {
+      background-image: url('../img/banner3.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+  
+    .partners-list {
+      width: 942px;
+      display: flex;
+      justify-content: space-between;
+    }  
+
+    .partners-list-item {
+      flex: 0 0 220px;
+    }
+
+    .partners-list-item:nth-last-child(-n + 4) {
+      margin-bottom: 0;
+    } 
+  }

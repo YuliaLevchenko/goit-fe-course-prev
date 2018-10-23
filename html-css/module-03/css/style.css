@@ -1,0 +1,150 @@
+html{
+	box-sizing:border-box;
+}
+
+*,
+*::before, 
+*::after{
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Playfair Display", "Times New Roman", serif;
+    font-weight: 400;
+    color: #626262;
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0;
+}
+
+.wrapper{
+    width: 900px;
+    padding-top: 44px;
+    padding-bottom: 70px;
+    margin: 0 auto;
+}
+
+.page-header {
+    margin-bottom: 100px;
+}
+
+.site-navigation {
+    margin: 0;
+    padding: 0;
+    font-size: 0px;
+    list-style: none;
+    text-align: center;
+}
+
+.site-navigation-item {
+    margin-right: 100px; /*отталкиваем элементы списка друг от друга вправо - но у всех элементов на макете разное расстояние, не знаю, как сделать разное, делаю усредненное */
+    display: inline-block;
+}
+
+.site-navigation li:last-child {
+    margin-right: 0; /*убираем марджин у последнего элемента списка. ОЧЕНЬ ВАЖНО*/  
+}
+
+.site-navigation a{
+    display: block;
+      color:#626262;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 14px;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus {/*фокус позволяет задать визуальное оформление при передвижению по элементам меню при помощи Tab*/
+	color: #03a9f4;
+}
+
+.features {
+    font-size: 0px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}  
+
+  .features-item {
+      display: inline-block;
+      margin-right: 60px;
+      margin-bottom: 135px;
+      width: 420px;
+  }
+
+  .features-item:nth-child(2n) {
+    margin-right: 0px;
+}
+
+  .features-item:nth-last-child(-n + 2) {
+    margin-bottom: 0px;
+}
+
+img.features-image {
+    margin-bottom: 30px;
+}
+
+.features-name {
+    font-family: Ubuntu;
+    color:#b4ad9e;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+.features-item h3 {
+    font-size: 30px;/* Приближение из-за подстановки шрифтов */
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 44px;
+}
+
+.features-announcement {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.btn {
+    font-family: PlayfairDisplay;
+    color: #626262;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0 auto;
+    display: block;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-right: 37px;
+    padding-left: 37px;
+    margin-top: 55px;
+    border: 1px solid #777;
+}
+
+button:hover,
+button:focus {
+    background-color:white;
+    border: 1px solid #626262;
+    color: #03a9f4;
+    margin: 0;
+    margin-top: 110px;
+    text-transform: uppercase;
+}
