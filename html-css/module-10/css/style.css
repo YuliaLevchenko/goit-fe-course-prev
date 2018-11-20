@@ -28,12 +28,13 @@ img {
 
 /*
  * ========================================
- * MASTHEAD
+ * HEADER
  * ========================================
  */
-  
-.masthead-wrapper {
-  background-image: -webkit-gradient (
+
+
+.masthead {
+background-image: -webkit-gradient (
     linear,
       left bottom, left top,
       from(rgba(252, 227, 138, 0.81)),
@@ -57,34 +58,12 @@ img {
       rgba(243, 129, 129, 0.81) 100%
     ),
     url('../img/Layer-15.jpg');
+  padding-top: 15px;
+  padding-bottom: 230px;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
 }
-  
-.masthead-wrapper__banner {
-  min-height: 1000px;
-}
-  
-.masthead {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-height: 80px;
-  margin-bottom: 150px;
-}
-
-/*
- * ========================================
- * LOGO
- * ========================================
- */
 
 .logo {
   display: inline-block;
@@ -92,61 +71,100 @@ img {
   font-size: 30px;
   font-weight: 700;
   text-decoration: none;
+  margin-right: auto;
 }
 
 .logo:hover {
-  font-size: 36px;
   color: #fce38a;
 }
 
 
 /*
  * ========================================
- * NAVIGATION
+ * NAV
  * ========================================
  */
 
-.masthead__nav {
+
+ .masthead__nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 170px;
 }
 
 .nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 0;
-  margin: 28px 0 0 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; 
+  -webkit-box-pack: justify; 
+      -ms-flex-pack: justify; 
+          justify-content: space-between;
 }
-  
-.site-nav__item, .user-nav__item {
-  display: inline-block;
+
+.site-nav {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-width: 500px;
+}
+
+.user-nav {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-width: 90px;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
   margin-left: 50px;
 }
-  
+
 .site-nav__item:first-child {
   margin-left: 0;
 }
-  
-.site-nav__link {
-  display: block;
-  border-bottom: 2px solid transparent;
-  text-decoration: none;
-}
 
-.site-nav__link {
-  color: #ffffff;
+.site-nav__link,
+.user-nav__link {
+  display: block;
+  text-decoration: none;
   font-size: 14px;
   line-height: 14px;
   font-weight: 400;
   text-transform: uppercase;
+  color: #ffffff;
+  border-bottom: 2px solid transparent;
   padding-bottom: 7px;
 }
 
-.site-nav__link:hover {
+.site-nav__link:hover, 
+.user-nav__link:hover {
   color: #fce38a;
   border-color: #fce38a;
+}
+
+.site-nav__link:hover .shopping-cart,
+.user-nav__link:hover .magnifying-glass {
+  fill:  #fce38a;
 }
 
 
@@ -162,14 +180,14 @@ img {
   margin: auto;
 }
 
-.header-slogan__content {
+.header-slogan__title {
   font-family: 'Kaushan Script', cursive;
   color: #ffffff;
   font-size: 72px;
   margin: 0 0 42px 0;
 }
 
-.header-slogan__title {
+.header-slogan__content {
   margin: 0 0 50px 0;
   color: #ffffff;
   font-size: 150px;
@@ -203,10 +221,6 @@ img {
  * SERVICES
  * ========================================
  */
- 
-.services-wrapper {
-  background-color: #ffffff;
-}
 
 .section {
   padding: 60px 0  30px 0;
@@ -221,6 +235,8 @@ img {
 
 .header__caption {
   display: block;
+  margin: 0;
+  bottom: 0;
   margin-bottom: 24px;
   color: #333;
   font-family: 'Kaushan Script', cursive;
@@ -277,7 +293,7 @@ img {
   flex: 0 0 30%;
   margin-bottom: 46px;
   position: relative;
-  padding-left: 40px;
+  padding-left: 60px;
 }
   
 .services__item:nth-last-child(-n + 3) {
@@ -299,7 +315,7 @@ img {
   background-position: center;
   position: absolute;
   top: 0;
-  left: -10px;
+  left: 0px;
 }
 
 .photography::before {
@@ -351,10 +367,6 @@ img {
  * ========================================
  */
 
-.team-wrapper {
-  background-color: #ffffff;
-}
-
 .header__title {
   margin: 0 0 46px 0;
 }
@@ -365,6 +377,8 @@ img {
   font-size: 15px;
   font-weight: 400;
   line-height: 24px;
+  margin: 0;
+  padding: 0;
 }
 
 /*
@@ -554,14 +568,17 @@ img {
   padding: 25px 0;
 }
 
-.footer__text {
+.page-footer__copyright {
   font-size: 14px;
   font-weight: 700;
   color: #333333;
 }
 
 .colortext {
+  display: inline-block;
   color: #f38181;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .form__inp {
