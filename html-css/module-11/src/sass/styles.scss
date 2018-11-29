@@ -1,0 +1,22 @@
+/*
+   Import partials below
+*/
+@import 'normalize';
+@import 'helpers/variables.scss';
+@import 'helpers/mixins.scss';
+
+@import 'base.scss';
+
+/*Components*/
+
+@import 'components/link.scss';
+@import 'components/list.scss';
+@import 'components/container.scss';
+@import 'components/header.scss';
+@import 'components/nav.scss';
+@import 'components/services.scss';
+@import 'components/section.scss';
+@import 'components/team.scss';
+@import 'components/socials-list.scss';
+@import 'components/page-footer.scss';
+@import 'components/contact-form.scss';

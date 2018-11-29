@@ -1,0 +1,44 @@
+.section-header {
+    margin-bottom: 66px;
+  
+    &__title {
+      margin: 0 auto 26px;
+      font-family: $title-font-style;
+      font-size: 24px;
+      font-weight: 700;
+      text-align: center;
+      color: $font-color-dark;
+    }
+    
+    &__subjection {
+      margin: 0 auto;
+      color: $font-color-dark;
+      font-family: $subjection-font-style;
+      font-size: 30px;
+      font-weight: 700;
+      text-align: center;
+      text-transform: uppercase;
+  
+      &::after {
+        margin: 0 auto;
+        margin-top: 42px;
+        display: block;
+        background-color: $base-fontcolor-dark;
+        width: 60px;
+        height: 3px;
+        content: "";
+      }
+    }
+    
+    &__description {
+      margin: 0 auto;
+      margin-top: 46px;
+      font-family: $main-text-font-style;
+      color: #999;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: center;
+      max-width: 940px;
+    }
+}

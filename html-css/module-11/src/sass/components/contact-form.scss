@@ -1,0 +1,35 @@
+.contact-form {
+    &__email {
+      width: 230px;
+      height: 40px;
+      box-sizing: border-box;
+      padding-left: 14px;
+      font-size: 15px;
+      font-family: $main-text-font-style;
+      font-weight: 300;
+      font-style: italic;
+      text-align: left;
+      text-transform: capitalize;
+      border: 1px solid rgb(204, 204, 204);
+    }
+    
+    &__button {
+      width: 152px;
+      height: 40px;
+      font-size: 14px;
+      font-family: $subjection-font-style;
+      color: $font-color-lite;
+      background-color: rgb(149, 225, 211);
+      font-weight: bold;
+      text-transform: uppercase;
+      text-align: center;
+      border: transparent;
+    
+      &:hover,
+      &:focus {
+        cursor: pointer;
+        background-color: $base-fontcolor-dark;
+        transition: 0.5s;
+      }
+    }
+}

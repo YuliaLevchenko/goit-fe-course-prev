@@ -1,0 +1,33 @@
+@mixin center-flex ($type: 'all') {
+    display: flex;
+  
+    @if $type=='all' {
+      justify-content: center;
+      align-items: center;
+    } @else if $type== 'hor' {
+      justify-content: center;
+    } @else if $type== 'ver' {
+      align-items: center;
+    }  
+}
+  
+@mixin space-between-flex ($type: 'all') {
+    display: flex;
+  
+    @if $type=='all' {
+      justify-content: space-between;
+      align-items: space-between;
+    } @else if $type== 'hor' {
+      justify-content: space-between;
+    } @else if $type== 'ver' {
+      align-items: space-between;
+    }  
+}
+  
+@mixin font-settings($size, $height) {
+    font-style: $size;
+    line-height: $height;
+}
+  
+  @mixin name {
+}

@@ -1,0 +1,23 @@
+.socials-list {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+  
+    &__link {
+      @include center-flex('all');
+      width: 56px;
+      height: 56px;
+      border: rgba(243, 129, 129, 0.502) solid 1px;
+      background-color: $base-fontcolor-lite;
+      fill: $base-fontcolor-dark;
+    
+      &:hover,
+      &:focus {
+        background-color: $base-fontcolor-dark;
+        fill: $font-color-lite;
+      }
+    }
+}

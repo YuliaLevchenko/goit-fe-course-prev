@@ -1,0 +1,29 @@
+.page-footer {
+    @include center-flex('ver');
+    flex-direction: row;
+    height: 62px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-top: 1px solid #e5e5e5;
+  
+    &__text {
+      margin: 0;
+      padding: 0;
+      font-family: $subjection-font-style;
+      color: $font-color-dark;
+      font-size: 14px;
+      font-weight: 400;
+    }
+    
+    &__link {
+      display: inline-block;
+      text-decoration: none;
+      color: $base-fontcolor-dark;
+    }
+    
+    &__form {
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+}

@@ -1,0 +1,72 @@
+.header {
+  &__section {
+    margin: 0 auto;
+    margin-top: 142px;
+    width: 820px;
+    text-align: center;
+  }
+  
+  &__title {
+    margin: 0 auto;
+    color: $font-color-lite;
+    font-family: $title-font-style;
+    font-size: 72px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 86px;
+  }
+  
+  &__subjection {
+    margin: 0 auto;
+    margin-top: 38px;
+    margin-bottom: 110px;
+    color: $font-color-lite;
+    font-family: $subjection-font-style;
+    font-size: 150px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 140px;
+  }
+  
+  &__button {
+    border-style: solid;
+    border-width: 3px;
+    border-color: $font-color-lite;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0);
+    width: 160px;
+    height: 40px;
+    font-family: $subjection-font-style;
+    color: $font-color-lite;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+  
+    &:hover,
+    &:focus {
+      background-color: $base-color-light;
+      border-radius: 10px;
+      /*outline: none;*/
+    }
+  }  
+}
+
+.page-header {
+  margin: 0 auto;
+  @include center-flex('hor');
+  flex-wrap: wrap;
+  min-height: 1000px;
+  background: linear-gradient(to top, $base-color-light 0%, $base-color-dark 100%), url(../images/Layer-15.jpg) 100% 100% no-repeat transparent;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+
+  @media (min-resolution: 2dppx) {
+    background: linear-gradient(to top, $base-color-light 0%, $base-color-dark 100%), url(../images/Layer-15@2x.jpg) 100% 100% no-repeat transparent;
+    background-size: cover;
+    background-position: center;
+  }
+}
