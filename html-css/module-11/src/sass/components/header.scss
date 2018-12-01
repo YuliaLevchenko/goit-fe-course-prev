@@ -1,9 +1,8 @@
 .header {
   &__section {
-    margin: 0 auto;
-    margin-top: 142px;
-    width: 820px;
+    width: 840px;
     text-align: center;
+    margin: auto;
   }
   
   &__title {
@@ -14,11 +13,11 @@
     font-weight: 400;
     text-align: center;
     line-height: 86px;
+    margin-bottom: 38px;
   }
   
   &__subjection {
     margin: 0 auto;
-    margin-top: 38px;
     margin-bottom: 110px;
     color: $font-color-lite;
     font-family: $subjection-font-style;
@@ -30,26 +29,26 @@
   }
   
   &__button {
+    display: block;
+    margin: auto;
+    width: 160px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
     border-style: solid;
     border-width: 3px;
     border-color: $font-color-lite;
-    box-sizing: border-box;
-    background-color: rgba(0, 0, 0, 0);
-    width: 160px;
-    height: 40px;
     font-family: $subjection-font-style;
     color: $font-color-lite;
     font-size: 14px;
     font-weight: 700;
-    text-align: center;
     text-transform: uppercase;
-    cursor: pointer;
+    text-decoration: none;
   
     &:hover,
     &:focus {
       background-color: $base-color-light;
       border-radius: 10px;
-      /*outline: none;*/
     }
   }  
 }

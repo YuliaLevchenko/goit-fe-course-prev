@@ -2,6 +2,7 @@
     @include center-flex('all');
     min-height: 65px;
     flex-wrap: wrap;
+    margin-bottom: 170px;
   
     &__link {
       font-family: $subjection-font-style;
