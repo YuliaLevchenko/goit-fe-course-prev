@@ -1,3 +1,5 @@
+'use strict';
+
 const adminLogin = 'admin';
 
 let loginInput = prompt ('Введите логин');
