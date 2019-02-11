@@ -87,17 +87,20 @@ const users = [
   },
 ];
 
+//Получить массив имен всех пользователей (поле name).
 const getAllNames = users => users.map(user => user.name);
 
 console.log(getAllNames(users));
 // [ 'Moore Hensley', 'Sharlene Bush', 'Ross Vazquez', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony' ]
 
+//Получить массив объектов пользователей по цвету глаз (поле eyeColor).
 const getUsersByEyeColor = (users, color) =>
   users.filter(user => user.eyeColor === color);
 console.log(getUsersByEyeColor(users, 'blue'));
 // [объект Moore Hensley, объект Sharlene Bush, объект Carey Barr]
 console.log(getUsersByEyeColor(users, 'brown'));
 
+//Получить массив имен пользователей по полу (поле gender).
 const getUsersByGender = (users, gender) =>
   users.filter(user => user.gender === gender);
 
@@ -105,11 +108,13 @@ console.log(getUsersByGender(users, 'male'));
 // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
 console.log(getUsersByGender(users, 'female'));
 
+//Получить массив только неактивных пользователей (поле isActive).
 const getInactiveUsers = users => users.filter(users => !users.isActive);
 
 console.log(getInactiveUsers(users));
 // [объект Moore Hensley, объект Ross Vazquez, объект Blackburn Dotson]
 
+//Получить пользоваля (не массив) по email (поле email, он уникальный).
 const getUserByEmail = (users, email) =>
   users.find(user => user.email === email);
 
@@ -118,6 +123,7 @@ console.log(getUserByEmail(users, 'shereeanthony@kog.com'));
 console.log(getUserByEmail(users, 'elmahead@omatom.com'));
 // {объект пользователя Elma Head}
 
+//Получить массив пользователей попадающих в возрастную категорию от min до max лет (поле age).
 const getUsersWithAge = (users, min, max) =>
   users.filter(user => user.age >= min && user.age <= max);
 
@@ -127,11 +133,13 @@ console.log(getUsersWithAge(users, 20, 30));
 console.log(getUsersWithAge(users, 30, 40));
 // [объект Moore Hensley, объект Sharlene Bush, объект Blackburn Dotson, объект Sheree Anthony]
 
+//Получить общую сумму баланса (поле balance) всех пользователей.
 const getTotalBalance = users =>
   users.reduce((acc, user) => (acc += user.balance), 0);
 console.log(getTotalBalance(users));
 // 20916
 
+//Получить массив имен всех пользователей у которых есть друг с указанным именем.
 const getUsersByFriend = (users, name) =>
   users.filter(user => user.friends.includes(name));
 
