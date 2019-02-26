@@ -84,7 +84,7 @@ class Notepad {
   deleteNote(id) {
     for (let i = 0; i < this._notes.length; i += 1) {
       let note = this._notes[i];
-      if (note.id === id) {
+      if (note.id === Number(id)) {
         return this._notes.splice(i, 1);
       }
     }
@@ -285,6 +285,7 @@ const handleRemoveNote = evt => {
   if (nodeName !== 'I' || action !== 'delete') return;
   const parent = target.closest('.note-list__item');
   parent.remove();
+  notepad.deleteNote(parent.dataset(id));
 };
 
 listRef.addEventListener('click', handleRemoveNote);
