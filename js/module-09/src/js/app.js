@@ -95,6 +95,7 @@ class Notepad {
     let updateNoteContent = Object.keys(updatedContent);
     for (const key of updateNoteContent) {
       note[key] = updatedContent[key];
+      return note;
     }
   }
 
@@ -104,6 +105,7 @@ class Notepad {
       return;
     }
     note.priority = priority;
+    return note;
   }
 
   filterNotesByQuery(query) {
@@ -282,10 +284,11 @@ const handleRemoveNote = evt => {
   const target = evt.target;
   const nodeName = target.nodeName;
   const action = target.textContent;
-  if (nodeName !== 'I' || action !== 'delete') return;
-  const parent = target.closest('.note-list__item');
+  if (action !== 'delete') return;
+  let parent = target.closest('.note-list__item');
+  notepad.deleteNote(parent.dataset.id);
   parent.remove();
-  notepad.deleteNote(parent.dataset(id));
+  console.log(parent);
 };
 
 listRef.addEventListener('click', handleRemoveNote);
