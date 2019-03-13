@@ -79,12 +79,14 @@ class Notepad {
 
   saveNote(note) {
     this._notes.push(note);
+    /*console.log(this._notes);*/
   }
 
   deleteNote(id) {
+    /*console.log(id);*/
     for (let i = 0; i < this._notes.length; i += 1) {
       let note = this._notes[i];
-      if (note.id === Number(id)) {
+      if (note.id == id) {
         return this._notes.splice(i, 1);
       }
     }
